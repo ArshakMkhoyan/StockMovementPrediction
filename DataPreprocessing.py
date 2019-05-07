@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 
+
+
 def movement_close(df):
     difference=df.Close.values[:-1]-df.Close.values[1:]
     difference=difference.reshape((1,-1))
