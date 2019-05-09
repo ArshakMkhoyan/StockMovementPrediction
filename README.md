@@ -1,1 +1,4 @@
-# StockMovementPrediction
+# Description
+A prevalent challenge in the field of portfolio management, stock movement prediction - through traditional means - has still not been brought to its optimum, in that there is yet not a ready-to-go algorithm for attaining guaranteed net positive returns from investment in stocks.  This paper contests that, with the application of unconventional predictive methods from the realm of Deep Learning, it is quite possible to arrive at a satisfactory outcome in determining the direction of stock price changes. By constructing and training a model based on the 26-year long stock price data of a sizeable representative from a selected oil industry, ‘Exxon Mobile’, I arrive at a performance indicator of approximately 54%, which is significantly higher than a Random Walk benchmark of 50%. In consideration with the obtained results, this paper demonstrates that the designed predictive model is largely effective and, more importantly, successful in predicting the movement of stock prices. 
+
+**Keywords**: Stock Movement Prediction, Deep Learning, LSTM, Technical and Fundamental indicators. 
