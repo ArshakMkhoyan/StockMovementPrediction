@@ -58,7 +58,7 @@ def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
 
 def reshape_data(scaled_train, scaled_test, y_train, y_test, n_days=5):
     # specify the number of lag hours
-    n_days = 5   
+    # n_days = 5   
     n_features = len(scaled_train[0])
     # frame as supervised learning
     reframed_train_x = series_to_supervised(scaled_train, n_days, n_features).values

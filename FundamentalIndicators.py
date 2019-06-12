@@ -24,8 +24,8 @@ class get_FundamentalIndicators(object):
         
     # DXY
     def add_DXY(self):
-        DXY1981 = pd.read_csv('../Final/Data/DXY1981.csv')
-        DXY = pd.read_csv('../Final/Data/DXY.csv')
+        DXY1981 = pd.read_csv('../StockMovementPrediction/Data/DXY1981.csv')
+        DXY = pd.read_csv('../StockMovementPrediction/Data/DXY.csv')
         DXY = pd.concat([DXY1981, DXY]).drop_duplicates('Date').reset_index(drop = True)
         DXY.Date = pd.to_datetime(DXY.Date)
         DXY = DXY.set_index('Date')
@@ -49,8 +49,8 @@ class get_FundamentalIndicators(object):
         
     # US bond rates
     def add_USbond(self):
-        US_bond1981 = pd.read_csv('../Final/Data/USA_10Y_bong_1981.csv')
-        US_bond = pd.read_csv('../Final/Data/USA_10Y_bong.csv')
+        US_bond1981 = pd.read_csv('../StockMovementPrediction/Data/USA_10Y_bong_1981.csv')
+        US_bond = pd.read_csv('../StockMovementPrediction/Data/USA_10Y_bong.csv')
         US_bond = pd.concat([US_bond1981, US_bond]).drop_duplicates('Date').reset_index(drop = True)
         US_bond.Date = pd.to_datetime(US_bond.Date)
         US_bond = US_bond.set_index('Date')
@@ -76,7 +76,7 @@ def get_FI_for_analysis(df):
 
 def get_FI_for_model(df):
     '''Fundamental indicators'''
-    df = get_FundamentalIndicators(df).add_DXY()\
+    df = get_FundamentalIndicators(df).add_VIX()\
                                       .modify()
-#     .add_VIX()\
+#     .add_DXY()\
     return df
