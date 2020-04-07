@@ -99,7 +99,7 @@ def get_TI(df):
                                     .add_MassIndex()\
                                     .add_AverageTrueRange()\
                                     .add_MoneyFlowIndex()\
-                                    .add_StandardDeviation\
+                                    .add_StandardDeviation()\
                                     .modify()
     
     return df
